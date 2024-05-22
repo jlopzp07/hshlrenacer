@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renacer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="Renacer">
+            <img src="./assets/Logo Renacer.png" alt="Renacer">
         </div>
         <nav>
             <ul>
@@ -24,20 +26,23 @@
     </header>
     <main>
         <section class="content">
-            <div class="text">
-                <h2>El respeto y el cuidado, por una mejor vida</h2>
-                <p>Brindamos atención integral de la más alta calidad a personas mayores, con un enfoque en el respeto, la dignidad y el bienestar.</p>
-                <h2>Inscribe tu adulto mayor</h2>
-                <form>
-                    <input type="email" id="email" placeholder="Ingresa un correo electrónico...">
-                    <button type="submit">Inscribirme</button>
+            <div class="hero-content flex-vertical">
+                <h1>El respeto y el cuidado, por una mejor vida</h1>
+                <p>Brindamos atención integral de la más alta calidad a personas mayores, con un enfoque en el respeto,
+                    la dignidad y el bienestar.</p>
+                <form class="flex-vertical">
+                    <label for="email">Inscribe a tu adulto mayor</label>
+                    <div class="flex-horizontal">
+                        <input type="email" id="email" placeholder="Ingresa un correo electrónico..." required>
+                        <button type="submit">Inscribirme</button>
+                    </div>
                 </form>
             </div>
-            <div class="images">
-                <img src="images/image1.jpg" alt="Cuidado de personas mayores">
-                <img src="images/image2.jpg" alt="Felicidad de adultos mayores">
-                <img src="images/image3.jpg" alt="Instalaciones de Renacer">
-                <img src="images/image4.jpg" alt="Actividades en Renacer">
+            <div class="hero-images">
+                <img class="item" src="./assets/geriatric-1.svg" alt="Cuidado de personas mayores">
+                <img class="item" src="./assets/geriatric-2.svg" alt="Felicidad de adultos mayores">
+                <img class="item" src="./assets/geriatric-3.svg" alt="Instalaciones de Renacer">
+                <img class="item" src="./assets/geriatric-4.svg" alt="Actividades en Renacer">
             </div>
         </section>
     </main>
@@ -45,4 +50,5 @@
         <p>© 2024 Renacer. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
