@@ -267,62 +267,18 @@ form {
 
 .section-content {
     gap: 90px;
-    width: 100%;
-}
-
-.service-center > div:first-of-type{
-    align-items: center;
-    text-align: center;
-}
-
-.service-item{
-    display: inherit;
-    text-align:  center;
-    gap: 32px;
-}
-
-.service-item .card-content{
-    padding: 0;
-}
-
-.service-item .card-content div.flex-vertical{
-    padding: 0;
-    gap: 16px;
-}
-
-.service-item .card-content .hidden-row div.flex-vertical{
-    padding: 0;
-    gap: 16px;
-}
-
-.service-figure img{
-    width: 100%;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 56px;
-}
-
-.services-buttons{
-    align-self: center;
-    display: inherit;
-    gap: 24px;
 }
 
 .employees-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 24px;
 }
 
 .card-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     background-color: #FFF;
     border: 1px solid #F0F3F8;
     border-radius: 16px;
@@ -332,16 +288,10 @@ form {
     -o-border-radius: 16px;
 }
 
-.hidden-row{
-    display: none;
-}
-
-.employees-grid .group {
-    grid-column: span 3;
-    background-image: url(./assets/group-picture.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.group {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -349,23 +299,31 @@ form {
     -o-border-radius: 16px;
 }
 
+.span-2 {
+    grid-column: span 2;
+}
 
 .card-container img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+    width: 200px; /* Ensure images fill the container's width */
+    height: 250px; /* Keep the height consistent */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+div.card-container .flex-vertical {
+    justify-content: space-between;
 }
 
 .card-content {
+    flex: 1;
     padding: 16px;
     gap: 16px;
 }
 
-.card-content > div:first-of-type {
+.card-content>div:first-of-type {
     gap: 4px;
 }
 
-.card-content > div:first-of-type > p {
+.card-content>div:first-of-type>p {
     min-height: 42px;
 }
 
@@ -375,7 +333,7 @@ form {
     line-height: 20px;
 }
 
-.card-content  span {
+.card-content span {
     font-size: 1.2rem;
     color: #858D98;
 }
