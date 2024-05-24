@@ -93,7 +93,7 @@ main {
 }
 
 .content:not(:first-child) {
-    margin: 160px 40px;
+    margin: 160px 40px 0;
 }
 
 .hero-content {
@@ -267,6 +267,64 @@ form {
 
 .section-content {
     gap: 90px;
+    width: 100%;
+}
+
+.service-center > div:first-of-type{
+    align-items: center;
+    text-align: center;
+}
+
+.service-item{
+    display: inherit;
+    text-align:  center;
+    gap: 32px;
+}
+
+.service-item .card-content{
+    padding: 0;
+}
+
+.service-item .card-content div.flex-vertical{
+    padding: 0;
+    gap: 16px;
+}
+
+.service-item .card-content .hidden-row div.flex-vertical{
+    padding: 0;
+    gap: 16px;
+}
+
+.service-figure img{
+    width: 100%;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 56px;
+}
+
+.hidden-row{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden-row.show {
+    display: grid;
+    opacity: 1;
+}
+
+.services-buttons{
+    align-self: center;
+    display: inherit;
+    gap: 24px;
 }
 
 .employees-grid {
