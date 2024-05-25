@@ -22,3 +22,24 @@ document.getElementById('toggleServices').addEventListener('click', function() {
         document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
     }
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const modal = document.getElementById("myModal");
+    const openModalBtn = document.querySelector(".open-modal-btn");
+    const closeBtn = document.querySelector(".close-btn");
+
+    openModalBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+

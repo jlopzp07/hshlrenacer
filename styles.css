@@ -226,6 +226,7 @@ form {
     border-radius: 16px;
     cursor: pointer;
     height: 60px;
+    gap: 8px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
@@ -396,6 +397,145 @@ div.card-container .flex-vertical {
     color: #858D98;
 }
 
+.volunteers-container {
+    width: 100%;
+    align-items: center;
+    background-color: #F0F3F8;
+    border: 1px solid #6699CA;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    padding: 32px;
+    gap: 32px;
+    margin: 80px 0;
+}
+
+.volunteers-container .icon-container {
+    display: inherit;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: #CADBED;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.volunteers-content {
+    flex: 1;
+    gap: 4px;
+}
+
+.volunteers-container button {
+    align-items: center;
+}
+
+.outline-button:hover .icon-tabler-phone {
+    stroke: #FFF;
+}
+
+.facilities-images {
+    columns: 540px;
+    gap: 16px;
+    width: 96%;
+    flex: 1;
+    margin: 0 auto;
+}
+
+.facilities-images img {
+    width: 100%;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.facilities-images > * {
+    break-inside: avoid;
+    margin-bottom: 16px;
+}
+
+.facilities-buttons {
+    display: inherit;
+    justify-content: center;
+}
+
+/* Modal default styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center; /* Center the modal horizontally */
+    align-items: center; /* Center the modal vertically */
+    display: flex; /* Flexbox to center content */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Button styles (your existing button styles) */
+.outline-button {
+    padding: 8px 16px;
+    border: 2px solid var(--primary);
+    background-color: transparent;
+    font-weight: bold;
+    color: var(--text-secondary);
+    border-radius: 16px;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    align-items: center; /* Center the content vertically */
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.outline-button:hover {
+    background-color: var(--primary);
+    color: #FFF;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
@@ -416,5 +556,18 @@ footer {
 
     .hero-images {
         display: none;
+    }
+    
+}
+
+@media (1040px < width < 1220px) {
+    .facilities-images {
+        columns: 340px;
+    }
+}
+
+@media (width > 1220px) {
+    .facilities-images {
+        columns: 440px;
     }
 }
