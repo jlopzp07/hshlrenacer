@@ -396,10 +396,99 @@ div.card-container .flex-vertical {
     color: #858D98;
 }
 
-footer {
+/* Inicio sección testimonios */
+
+#testimonials .section-content{
+    gap: 24px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    overflow-x: auto;
+}
+
+.testimonial {
+    display: inherit;
+    gap: 24px;
+}
+
+.stars {
+    color: #FFA500; /* Color de las estrellas */
+    font-size: 3.5em;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.relation {
+    color: #555555;
+}
+
+/* Fin testimonios */
+
+
+/* Footer */
+footer{
+    display: grid;
+    justify-content: center;
+    background-color: #FFEBD4;
+    height: 403px;
+}
+
+.footer-row{
+    align-items: center;
+    display: flex;
+    gap: 49px;
+}
+
+.footer-container {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    gap: 137px;
+    max-width: 1400px;
+    margin-top: 51px;
+}
+
+.footer-span{
+    height: 1px;
+    width: 156px;
+    border: 1px solid black;
+}
+
+.footer-logo img {
+    height: 80px; /* Ajustar según el tamaño de tu logo */
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-rights {
+    display: flex;
     text-align: center;
-    padding: 20px;
-    background-color: #f8f8f8;
+}
+
+.span-rights{
+    height: 1px;
+    width: 156px;
+    border: 1px solid black;
+}
+
+.footer-rights a img {
+    height: 24px; /* Ajustar según el tamaño del icono de Instagram */
+    margin-left: 10px;
 }
 
 
