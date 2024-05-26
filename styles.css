@@ -362,9 +362,9 @@ form {
 }
 
 .card-container img {
-    width: 200px; /* Ensure images fill the container's width */
-    height: 250px; /* Keep the height consistent */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
 }
 
 div.card-container .flex-vertical {
