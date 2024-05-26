@@ -22,3 +22,19 @@ document.getElementById('toggleServices').addEventListener('click', function() {
         document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
     }
 });
+
+/* JS para las FAQ */
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const toggle = item.querySelector('.faq-toggle img');
+        
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            toggle.src = 'assets/faqtoogle.svg';
+        } else {
+            answer.style.display = 'block';
+            toggle.src = 'assets/faqtoogleclose.svg';
+        }
+    });
+});

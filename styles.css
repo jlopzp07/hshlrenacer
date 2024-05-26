@@ -429,6 +429,58 @@ div.card-container .flex-vertical {
 
 /* Fin testimonios */
 
+/* FAQ */
+
+#faq .section-header{
+    align-items: center;
+}
+
+#faq .section-content{
+    gap: 80px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 80%;
+    align-self: center;
+}
+
+.faq-item {
+    display: grid;
+    gap: 16px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-weight: bold;
+    background-color: inherit;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    line-height: 1.8;
+    background-color: inherit;
+    gap: 12px;
+}
+
+.faq-answer p{
+    font-size: 1.8rem;
+}
+
+.faq-toggle {
+    font-size: 20px;
+}
+
+/* Fin FAQ*/
 
 /* Footer */
 footer{
@@ -436,6 +488,7 @@ footer{
     justify-content: center;
     background-color: #FFEBD4;
     height: 403px;
+    margin-top: 300px; /*MArgin temporal, eliminar cuando se tenga a ultima sección*/
 }
 
 .footer-row{
