@@ -415,8 +415,45 @@ div.card-container .flex-vertical {
 }
 
 .stars {
-    color: #FFA500; /* Color de las estrellas */
-    font-size: 3.5em;
+    display: flex;
+    gap: 8px;
+}
+
+.star {
+    opacity: 0;
+    width: 28px;
+    height: 28px;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 1.2s ease;
+    -webkit-transition: opacity 0.5s ease, transform 1.2s ease;
+    -moz-transition: opacity 0.5s ease, transform 1.2s ease;
+    -ms-transition: opacity 0.5s ease, transform 1.2s ease;
+    -o-transition: opacity 0.5s ease, transform 1.2s ease;
+}
+
+.star.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.star:nth-child(1) {
+    transition-delay: 0.2s;
+}
+
+.star:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.star:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.star:nth-child(4) {
+    transition-delay: 0.5s;
+}
+
+.star:nth-child(5) {
+    transition-delay: 0.6s;
 }
 
 .author {
@@ -425,6 +462,7 @@ div.card-container .flex-vertical {
 
 .relation {
     color: #555555;
+    font-weight: 500;
 }
 
 /* Fin testimonios */
@@ -450,13 +488,14 @@ div.card-container .flex-vertical {
 .faq-item {
     display: grid;
     gap: 16px;
+    padding: 16px 0;
 }
 
 .faq-question {
     width: 100%;
     text-align: left;
     border: none;
-    font-weight: bold;
+    font-weight: 600;
     background-color: inherit;
     font-size: 2.5rem;
     cursor: pointer;
@@ -466,10 +505,16 @@ div.card-container .flex-vertical {
 }
 
 .faq-answer {
-    display: none;
+    max-height: 0px;
     line-height: 1.8;
     background-color: inherit;
     gap: 12px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    -webkit-transition: max-height 0.5s ease;
+    -moz-transition: max-height 0.5s ease;
+    -ms-transition: max-height 0.5s ease;
+    -o-transition: max-height 0.5s ease;
 }
 
 .faq-answer p{
@@ -482,28 +527,117 @@ div.card-container .flex-vertical {
 
 /* Fin FAQ*/
 
+/* CTA styles*/
+#cta {
+    background-color: #37474F;
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    align-items: center;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    gap: 48px;
+    max-width: 600px;
+}
+
+.cta-text{
+    display: inherit;
+    justify-content: center ;
+    gap: 56px;
+}
+
+.cta-text form {
+    gap: 8px;
+}
+
+.cta-text form div{
+    gap: 8px;
+}
+
+.cta-text div:first-child {
+    display: grid;
+    gap: 8px;
+}
+
+.cta-container form label{
+    font-weight: 500;
+}
+
+.cta-text form input {
+    flex: 1 ;
+    padding: 10px;
+    font-size: 1.6rem;
+    border: 1px solid rgba(23, 38, 58, 0.3);
+    background-color: rgba(127, 127, 127, 0.63);
+    border-radius: 16px;
+    color: #FFFFFF;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.cta-text form input:focus {
+    outline-width: 0;
+    border: 3px solid #FB8501;
+}
+
+.cta-text form input::placeholder {
+    color: rgba(255, 254, 254, 0.63);
+
+}
+
+#cta img {
+    flex: 1;
+    width: 100%;
+    height: 500px;
+    border-radius: 24px;
+    object-fit: cover;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+/* end CTA styles */
+
 /* Footer */
 footer{
-    display: grid;
+    display: flex;
     justify-content: center;
     background-color: #FFEBD4;
-    height: 403px;
-    margin-top: 300px; /*MArgin temporal, eliminar cuando se tenga a ultima sección*/
+    margin-top: 300px;
+    padding: 40px 120px;
+}
+
+footer .flex-vertical{
+    gap: 144px;
 }
 
 .footer-row{
     align-items: center;
     display: flex;
-    gap: 49px;
+    gap: 24px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .footer-container {
-    display: grid;
+    margin: auto;
     justify-content: space-between;
-    align-items: center;
     gap: 137px;
     max-width: 1400px;
-    margin-top: 51px;
+    width: 100%;
 }
 
 .footer-span{
@@ -559,4 +693,6 @@ footer{
     .hero-images {
         display: none;
     }
+
+   
 }
