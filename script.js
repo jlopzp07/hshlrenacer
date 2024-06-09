@@ -23,23 +23,50 @@ document.getElementById('toggleServices').addEventListener('click', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    const modal = document.getElementById("myModal");
-    const openModalBtn = document.querySelector(".open-modal-btn");
-    const closeBtn = document.querySelector(".close-btn");
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slider-image');
+    const totalSlides = slides.length;
+    const slidesContainer = document.querySelector('.facilities-images-container');
 
-    openModalBtn.addEventListener("click", () => {
-        modal.style.display = "flex";
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    const openModalButton = document.getElementById('openModalButton');
+    const closeModalButton = document.getElementById('closeModalButton');
+    const modal = document.querySelector('.facilities-images-modal');
+
+    function showSlide(index) {
+        const offset = -index * 100;
+        slidesContainer.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+
+    openModalButton.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        showSlide(currentIndex);
     });
 
-    closeBtn.addEventListener("click", () => {
-        modal.style.display = "none";
+    closeModalButton.addEventListener('click', () => {
+        modal.style.display = 'none';
     });
-
-    window.addEventListener("click", (event) => {
+    window.addEventListener('click', (event) => {
         if (event.target == modal) {
-            modal.style.display = "none";
+            modal.style.display = 'none';
         }
     });
-});
 
+    showSlide(currentIndex);
+});

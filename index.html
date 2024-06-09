@@ -284,8 +284,8 @@
                 </div>
                 <button class="outline-button flex-horizontal">
                     <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone" width="24"
-                            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#C73607" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-hover icon icon-tabler icon-tabler-phone"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#C73607" fill="none"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                             <path
@@ -294,39 +294,79 @@
                     </div>Contáctanos para recibir información
                 </button>
             </div>
-            
-        <div style="position: absolute; left: -200px; z-index: -1; transform: translateY(1500px);">
-            <img src="./assets/shape-3.png" alt="">
-        </div>
+
+            <div style="position: absolute; left: -200px; z-index: -1; transform: translateY(1500px);">
+                <img src="./assets/shape-3.png" alt="">
+            </div>
         </section>
         <!-- Fin sección de empleados -->
         <!-- Inicio sección de instalaciones -->
         <section style="padding: 0 0 700px;" class="content" id="facilities">
             <div class="section-content flex-vertical service-center">
                 <div class="section-header flex-vertical">
-                    <h4>Calidad</h4>
-                    <h2>Ofrecemos siempre lo mejor</h2>
-                    <p>Ofrecemos una amplia gama de servicios diseñados para atender las necesidades físicas,
-                        emocionales y sociales de nuestros residentes.</p>
+                    <h4>Cuidad</h4>
+                    <h2>El lugar donde ellos serán felices</h2>
+                    <p>Creamos un ambiente cálido y acogedor donde nuestros residentes se sienten como en casa. Nuestras
+                        instalaciones confortables ofrecen espacios para socializar, disfrutar de actividades
+                        y relajarse.</p>
                 </div>
                 <div class="facilities-images">
-                    <img src="./assets/facillity-1.png" alt="Cuidado de personas mayores">
+                    <img src="./assets/facility-1.png" alt="Cuidado de personas mayores">
                     <img src="./assets/facility-2.png" alt="Felicidad de adultos mayores">
                     <img src="./assets/facility-3.png" alt="Instalaciones de Renacer">
                     <img src="./assets/facility-4.png" alt="Actividades en Renacer">
                 </div>
                 <div class="facilities-buttons">
-                    <button id="toggleServices" class="outline-button open-modal-btn">Ver todas las imágenes</button>
+                    <!-- <button id="openModalButton" class="outline-button flex-horizontal">
+                        Ver todas las imágenes
+                    </button> -->
+                    <a href="https://www.instagram.com/hermanosolhermanalunarenacer/" target="_blank">
+                        <button class="outline-button flex-horizontal">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="icon-hover icon icon-tabler icon-tabler-brand-instagram" width="24"
+                                    height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#C73607" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                                    <path d="M16.5 7.5l0 .01" />
+                                </svg>
+                            </div>Visita nuestro Instagram
+                        </button>
+                    </a>
                 </div>
             </div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close-btn">&times;</span>
-                    <h2>Modal Title</h2>
-                    <p>This is a sample modal.</p>
+            <div class="facilities-images-modal">
+                <div class="facilities-modal-content flex-vertical">
+                    <button id="closeModalButton" class="close-button">×</button>
+                    <h3 style="flex-shrink: 0;">Todas las imágenes</h3>
+                    <div class="facilities-images-container">
+                        <img class="slider-image" src="./assets/facility-1.png" alt="Cuidado de personas mayores">
+                        <img class="slider-image" src="./assets/facility-2.png" alt="Felicidad de adultos mayores">
+                        <img class="slider-image" src="./assets/facility-3.png" alt="Instalaciones de Renacer">
+                        <img class="slider-image" src="./assets/facility-4.png" alt="Actividades en Renacer">
+                    </div>
+                    <button class="prev slider-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M15 6l-6 6l6 6" />
+                        </svg>
+                    </button>
+                    <button class="next slider-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right"
+                            width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M9 6l6 6l-6 6" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            
+
         </section>
         <!-- Fin sección de instalaciones -->
     </main>
