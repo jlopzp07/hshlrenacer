@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 :root {
     --background-main: #FFFDF9;
@@ -274,32 +275,32 @@ form {
     width: 100%;
 }
 
-.service-center > div:first-of-type{
+.service-center>div:first-of-type {
     align-items: center;
     text-align: center;
 }
 
-.service-item{
+.service-item {
     display: inherit;
-    text-align:  center;
+    text-align: center;
     gap: 32px;
 }
 
-.service-item .card-content{
+.service-item .card-content {
     padding: 0;
 }
 
-.service-item .card-content div.flex-vertical{
-    padding: 0;
-    gap: 16px;
-}
-
-.service-item .card-content .hidden-row div.flex-vertical{
+.service-item .card-content div.flex-vertical {
     padding: 0;
     gap: 16px;
 }
 
-.service-figure img{
+.service-item .card-content .hidden-row div.flex-vertical {
+    padding: 0;
+    gap: 16px;
+}
+
+.service-figure img {
     width: 100%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -314,7 +315,7 @@ form {
     gap: 56px;
 }
 
-.hidden-row{
+.hidden-row {
     display: none;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -325,7 +326,7 @@ form {
     opacity: 1;
 }
 
-.services-buttons{
+.services-buttons {
     align-self: center;
     display: inherit;
     gap: 24px;
@@ -459,7 +460,7 @@ div.card-container .flex-vertical {
     -o-border-radius: 16px;
 }
 
-.facilities-images > * {
+.facilities-images>* {
     break-inside: avoid;
     margin-bottom: 16px;
 }
@@ -471,15 +472,15 @@ div.card-container .flex-vertical {
 }
 
 .facilities-images-modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: center;
 }
@@ -536,9 +537,10 @@ div.card-container .flex-vertical {
     border-radius: 16px;
     user-select: none;
 }
+
 /* Inicio sección testimonios */
 
-#testimonials .section-content{
+#testimonials .section-content {
     gap: 24px;
 }
 
@@ -609,11 +611,11 @@ div.card-container .flex-vertical {
 
 /* FAQ */
 
-#faq .section-header{
+#faq .section-header {
     align-items: center;
 }
 
-#faq .section-content{
+#faq .section-content {
     gap: 80px;
 }
 
@@ -657,7 +659,7 @@ div.card-container .flex-vertical {
     -o-transition: max-height 0.5s ease;
 }
 
-.faq-answer p{
+.faq-answer p {
     font-size: 1.8rem;
 }
 
@@ -672,6 +674,7 @@ div.card-container .flex-vertical {
 #location .section-content {
     flex-wrap: wrap;
 }
+
 .left-side {
     flex: 1;
     min-width: 300px;
@@ -712,7 +715,118 @@ div.card-container .flex-vertical {
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
 }
+
 /* Fin location */
+
+/* Inicio donations */
+
+.donations-section {
+    background-color: #DAE7F4;
+    padding: 56px;
+    column-gap: 40px;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+.donation-info .row-container {
+    display: inherit;
+    column-gap: 16px;
+}
+
+.donation-info .icon-container {
+    display: inherit;
+    background-color: #E7EEF7;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.donation-row-info {
+    row-gap: 8px;
+}
+
+.donation-complement {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.donation-complement p {
+    color: #474747;
+}
+
+.donation-separator {
+    height: 0.5px;
+    width: 100%;
+    border-top: 1px solid #84A8CF;
+}
+
+.donation-complement span {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.donation-info .icon-container svg {
+    margin: auto;
+}
+
+.donations-section .left-side,
+.donations-section .right-side {
+    flex: 1;
+}
+
+.donations-section .right-side {
+    height: 100%;
+    padding: 32px;
+    background-color: rgba(49, 98, 152, 0.08);
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+}
+
+.donation-info {
+    row-gap: 40px;
+}
+
+.donation-info-complement {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.donation-info-complement h3 {
+    font-size: 2rem;
+    color: #474747;
+}
+
+.donation-info-complement h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.donation-info-complement div:first-of-type {
+    margin-bottom: 8px;
+}
+
+.donations-section .right-side h3 {
+    font-size: 2.4rem;
+}
+
+.donations-section .left-side h2 {
+    font-size: 8rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Fin donations */
 
 
 /* CTA styles*/
@@ -739,9 +853,9 @@ div.card-container .flex-vertical {
     max-width: 600px;
 }
 
-.cta-text{
+.cta-text {
     display: inherit;
-    justify-content: center ;
+    justify-content: center;
     gap: 56px;
 }
 
@@ -749,7 +863,7 @@ div.card-container .flex-vertical {
     gap: 8px;
 }
 
-.cta-text form div{
+.cta-text form div {
     gap: 8px;
 }
 
@@ -758,12 +872,12 @@ div.card-container .flex-vertical {
     gap: 8px;
 }
 
-.cta-container form label{
+.cta-container form label {
     font-weight: 500;
 }
 
 .cta-text form input {
-    flex: 1 ;
+    flex: 1;
     padding: 10px;
     font-size: 1.6rem;
     border: 1px solid rgba(23, 38, 58, 0.3);
@@ -815,10 +929,11 @@ div.card-container .flex-vertical {
     -ms-border-radius: 24px;
     -o-border-radius: 24px;
 }
+
 /* end CTA styles */
 
 /* Footer */
-footer{
+footer {
     display: flex;
     justify-content: center;
     background-color: #FFEBD4;
@@ -826,11 +941,11 @@ footer{
     padding: 40px 120px;
 }
 
-footer .flex-vertical{
+footer .flex-vertical {
     gap: 144px;
 }
 
-.footer-row{
+.footer-row {
     align-items: center;
     display: flex;
     gap: 24px;
@@ -846,14 +961,15 @@ footer .flex-vertical{
     width: 100%;
 }
 
-.footer-span{
+.footer-span {
     height: 1px;
     width: 156px;
     border: 1px solid black;
 }
 
 .footer-logo img {
-    height: 80px; /* Ajustar según el tamaño de tu logo */
+    height: 80px;
+    /* Ajustar según el tamaño de tu logo */
 }
 
 .footer-nav ul {
@@ -873,14 +989,15 @@ footer .flex-vertical{
     text-align: center;
 }
 
-.span-rights{
+.span-rights {
     height: 1px;
     width: 156px;
     border: 1px solid black;
 }
 
 .footer-rights a img {
-    height: 24px; /* Ajustar según el tamaño del icono de Instagram */
+    height: 24px;
+    /* Ajustar según el tamaño del icono de Instagram */
     margin-left: 10px;
 }
 
@@ -900,8 +1017,8 @@ footer .flex-vertical{
         display: none;
     }
 
-   
-    
+
+
 }
 
 @media (1040px < width < 1220px) {
@@ -915,4 +1032,3 @@ footer .flex-vertical{
         columns: 440px;
     }
 }
-
