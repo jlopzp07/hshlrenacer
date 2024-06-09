@@ -667,6 +667,54 @@ div.card-container .flex-vertical {
 
 /* Fin FAQ*/
 
+/* Inicio location */
+
+#location .section-content {
+    flex-wrap: wrap;
+}
+.left-side {
+    flex: 1;
+    min-width: 300px;
+    gap: 32px;
+}
+
+.left-side p {
+    font-size: 1.6rem;
+}
+
+.left-side .left-content {
+    gap: 16px;
+}
+
+.left-side .left-content div {
+    column-gap: 8px;
+    align-items: flex-start;
+}
+
+.left-content .main-button {
+    width: max-content;
+}
+
+
+.right-side {
+    min-width: 300px;
+    flex: 2;
+}
+
+
+.right-side img {
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+/* Fin location */
+
+
 /* CTA styles*/
 #cta {
     background-color: #37474F;
