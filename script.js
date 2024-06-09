@@ -70,3 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     showSlide(currentIndex);
 });
+/* JS para las FAQ */
+
+document.querySelectorAll('.faq-answer').forEach(answer => {
+    answer.style.maxHeight = '0';
+});
+
+document.querySelectorAll('.faq-question').forEach(item => {
+    item.addEventListener('click', () => {
+        const answer = item.nextElementSibling;
+        const toggle = item.querySelector('.faq-toggle img');
+        
+        if (answer.style.maxHeight === '0px') {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            toggle.src = 'assets/faqtoogleclose.svg';
+        } else {
+            answer.style.maxHeight = '0px';
+            toggle.src = 'assets/faqtoogle.svg';
+        }
+    });
+});
+
+
+/* JS para la animación de las estrellas en testimonios */
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.star').forEach(star => {
+                    star.classList.add('visible');
+                });
+            }
+        });
+    }, { threshold: 1 });
+
+    document.querySelectorAll('.testimonial').forEach(item => {
+        observer.observe(item);
+    });
+});
+
