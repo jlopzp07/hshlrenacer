@@ -190,10 +190,10 @@ form {
     -o-border-radius: 16px;
 }
 
-.hero-content form input {
+form input {
     flex: 1;
     height: 100%;
-    padding: 10px;
+    padding: 16px;
     font-size: 1.6rem;
     border: 1px solid #17263a3f;
     border-radius: 16px;
@@ -203,6 +203,23 @@ form {
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
     opacity: 50%;
+}
+
+textarea {
+    padding: 16px;
+    font-size: 1.6rem;
+    border: 1px solid #17263a3f;
+    border-radius: 16px;
+    margin-right: 8px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    opacity: 50%;
+}
+
+textarea::placeholder {
+    line-height: 32px;
 }
 
 .main-button {
@@ -828,6 +845,43 @@ div.card-container .flex-vertical {
 
 /* Fin donations */
 
+/* Inicio contact form */
+
+#contact {
+    justify-content: center;
+}
+
+#contact .section-header {
+    display: inherit;
+    align-items: center;
+}
+
+.contact-section {
+    row-gap: 24px;
+}
+.contact-form {
+    row-gap: 24px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.contact-form button {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.contact-span {
+    height: 1px;
+    width: 50%;
+    margin: 24px auto;
+    border-top: 1px solid #0B0F0E;
+}
+
+/* Fin contact form */
 
 /* CTA styles*/
 #cta {
