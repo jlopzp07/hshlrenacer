@@ -79,18 +79,17 @@ document.querySelectorAll('.faq-answer').forEach(answer => {
 document.querySelectorAll('.faq-question').forEach(item => {
     item.addEventListener('click', () => {
         const answer = item.nextElementSibling;
-        const toggle = item.querySelector('.faq-toggle img');
-        
-        if (answer.style.maxHeight === '0px') {
+        const svg = item.querySelector('.faq-toggle');
+
+        if (answer.style.maxHeight === '0px' || !answer.style.maxHeight) {
             answer.style.maxHeight = answer.scrollHeight + 'px';
-            toggle.src = 'assets/faqtoogleclose.svg';
+            svg.innerHTML = '<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 15l6 -6l6 6" />';
         } else {
             answer.style.maxHeight = '0px';
-            toggle.src = 'assets/faqtoogle.svg';
+            svg.innerHTML = '<path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6" />';
         }
     });
 });
-
 
 /* JS para la animación de las estrellas en testimonios */
 document.addEventListener('DOMContentLoaded', () => {
