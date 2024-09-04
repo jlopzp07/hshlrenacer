@@ -29,7 +29,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 24px 40px;
 }
 
 h1 {
@@ -50,8 +50,8 @@ h4 {
 }
 
 p {
-    font-size: 1.8rem;
-    line-height: 27px;
+    font-size: 2rem;
+    line-height: 32px;
 }
 
 li:hover {
@@ -102,7 +102,7 @@ main {
 }
 
 .hero-content {
-    max-width: 550px;
+    max-width: 700px;
     margin-top: 56px;
     flex: 2;
     min-width: 450px;
@@ -122,7 +122,7 @@ label {
 }
 
 form {
-    gap: 4px;
+    gap: 8px;
 }
 
 .flex-vertical {
@@ -227,10 +227,11 @@ textarea::placeholder {
 }
 
 .main-button {
-    padding: 8px 16px;
+    padding: 8px 24px;
     border: 2px solid var(--primary);
     background-color: var(--primary);
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight: 600;
     color: #fff;
     border-radius: 16px;
     cursor: pointer;
@@ -361,11 +362,11 @@ textarea::placeholder {
 
 .card-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    background-color: #FFF;
-    border: 1px solid #F0F3F8;
+    background-color: #FFF9EC;
     border-radius: 16px;
+    padding: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
@@ -388,12 +389,18 @@ textarea::placeholder {
 }
 
 .card-container img {
-    width: 200px;
-    height: 250px;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 div.card-container .flex-vertical {
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -413,8 +420,8 @@ div.card-container .flex-vertical {
 
 
 .card-content p {
-    font-size: 1.4rem;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 26px;
 }
 
 .card-content span {
@@ -702,7 +709,7 @@ div.card-container .flex-vertical {
 
 .left-side {
     flex: 1;
-    min-width: 300px;
+    min-width: 470px;
     gap: 32px;
 }
 
@@ -746,9 +753,10 @@ div.card-container .flex-vertical {
 /* Inicio donations */
 
 .donations-section {
+    flex-wrap: wrap;
     background-color: #DAE7F4;
     padding: 56px;
-    column-gap: 40px;
+    gap: 40px;
     border-radius: 32px;
     -webkit-border-radius: 32px;
     -moz-border-radius: 32px;
@@ -808,7 +816,7 @@ div.card-container .flex-vertical {
 }
 
 .donations-section .right-side {
-    height: 100%;
+    min-width: 300px;
     padding: 32px;
     background-color: rgba(49, 98, 152, 0.08);
     border-radius: 24px;
@@ -1091,6 +1099,8 @@ footer .flex-vertical {
     }
 }
 
+
+
 @media (width < 870px) {
 
     .content {
@@ -1106,7 +1116,9 @@ footer .flex-vertical {
         display: none;
     }
 
-
+    .faq-container {
+        width: 100%;
+    }
 
 }
 
