@@ -54,6 +54,10 @@ p {
     line-height: 27px;
 }
 
+li:hover {
+    text-decoration: underline;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -946,10 +950,6 @@ div.card-container .flex-vertical {
     -moz-border-radius: 16px;
     -ms-border-radius: 16px;
     -o-border-radius: 16px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 .slider-button:hover {
@@ -1000,7 +1000,8 @@ footer {
 }
 
 footer .flex-vertical {
-    gap: 144px;
+    gap: 80px;
+    width: 100%;
 }
 
 .footer-row {
@@ -1022,7 +1023,7 @@ footer .flex-vertical {
 .footer-span {
     height: 1px;
     width: 156px;
-    border: 1px solid black;
+    border: 1px solid #757575;
 }
 
 .footer-logo img {
@@ -1031,6 +1032,7 @@ footer .flex-vertical {
 }
 
 .footer-nav ul {
+    font-size: 1.6rem;
     list-style: none;
     display: flex;
     gap: 40px;
@@ -1039,18 +1041,21 @@ footer .flex-vertical {
 .footer-nav a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
 }
 
 .footer-rights {
     display: flex;
-    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .span-rights {
     height: 1px;
-    width: 156px;
-    border: 1px solid black;
+    width: 100%;
+    display: block;
+    margin-bottom: 16px;
+    border: 1px solid #757575;
 }
 
 .footer-rights a img {
